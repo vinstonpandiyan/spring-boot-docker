@@ -1,7 +1,7 @@
 # spring-boot-docker
 Spring-boot Docker example
 
-[![Build Status](https://travis-ci.org/vinstonpandiyan/scala-play2-activiti-integration.svg?branch=master)](https://travis-ci.org/vinstonpandiyan/scala-play2-activiti-integration.svg?branch=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/78f6db9d16024552a7e9f3e9b781aec7)](https://www.codacy.com/app/vinstonpandiyan/scala-play2-activiti-integration?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vinstonpandiyan/scala-play2-activiti-integration&amp;utm_campaign=Badge_Grade) [![DockerHub](https://img.shields.io/badge/docker-available-blue.svg)](https://hub.docker.com/u/vinston/)
+[![Build Status](https://travis-ci.org/vinstonpandiyan/scala-play2-activiti-integration.svg?branch=master)](https://travis-ci.org/vinstonpandiyan/scala-play2-activiti-integration.svg?branch=master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/78f6db9d16024552a7e9f3e9b781aec7)](https://www.codacy.com/app/vinstonpandiyan/scala-play2-activiti-integration?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vinstonpandiyan/scala-play2-activiti-integration&amp;utm_campaign=Badge_Grade) [![DockerHub](https://img.shields.io/badge/docker-available-blue.svg)](https://hub.docker.com/u/vinston/spring-boot-docker)
 
 This is Spring-boot tomcat docker example,
 ## Build docker image
@@ -100,27 +100,3 @@ $ sbt build --prod
 ```
 
 ### Docker
-Scala Play2 Example is very easy to install and deploy in a Docker container.
-
-By default, the Docker will expose port 80, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
-
-```sh
-cd scalaplay2aesexample
-docker build -t vinston/scalaplay2aesexample:${package.json.version}
-```
-This will create the scalaplay2aesexample image and pull in the necessary dependencies. Be sure to swap out `${package.json.version}` with the actual version of scalaplay2aesexample.
-
-Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 9000 of the host to port 80 of the Docker (or whatever port was exposed in the Dockerfile):
-
-```sh
-docker run -d -p 9000:9000 --restart="always" <youruser>/scalaplay2aesexample:${package.json.version}
-```
-
-Verify the deployment by navigating to your server address in your preferred browser.
-
-```sh
-127.0.0.1:9000
-```
-
-
-
